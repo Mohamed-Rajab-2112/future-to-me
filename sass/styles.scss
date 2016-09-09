@@ -1,0 +1,500 @@
+@import "compass";
+@import "compass/css3";
+
+$lcolor : #F1D6C1;
+$mcolor : #8B6137;
+$dcolor : #651907;
+$ldcolor: scale-color($dcolor, $lightness:60%);
+$bgcolor: #F3E5DA;
+
+@include font-face("VarelaRound", font-files("VarelaRound-Regular.ttf"));
+
+%contact-buttons {
+  margin-bottom: 30px;
+  font-size: 2em;
+  padding: 10px;
+  color: $lcolor;
+  background-color: rgba($dcolor , 0.8);
+  border-radius: 30px;
+  transition: all 0.5s;
+  &:hover {
+    background-color: rgba($ldcolor , 1);
+    transition: all 0.5s;
+    color: $dcolor;
+  }
+}
+
+a:focus {
+  outline: none;
+}
+
+body {
+  font-family: 'VarelaRound', sans-serif;
+  width: 100%;
+}
+section {
+  background-color: $bgcolor;
+}
+h2 {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  margin-top: 0;
+  color: $dcolor;
+  letter-spacing: 0.1em;
+}
+
+h3 {
+  font-size: 1.1em !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $dcolor;
+  letter-spacing: 0.1em;
+}
+
+p {
+  font-size: 1.1em;
+  color: scale-color($mcolor, $lightness:15%);  
+  line-height: 1.5;
+}
+/*<!--    *********************************************   -->
+//<!--                      HEADER-->
+//<!--    ********************************************    -->*/
+header{ 
+  background: $ldcolor image-url("color-bg.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+  margin: 0;
+  padding-top: 250px;
+  h1 {
+    text-align: center;
+    font-size: 3.7em;
+    color: $dcolor;
+    letter-spacing: 0.3em;
+    -webkit-text-stroke: 1px $lcolor;
+    span {
+      color: $lcolor;
+      -webkit-text-stroke: 0;
+    }
+  }
+  p {
+    text-align: center;
+    color: $dcolor;
+    span {
+      color: $lcolor;
+      font-size: 1.1em;
+      display: inline;
+    }
+  }
+  .note {
+    background-color: rgba($lcolor,0.4);
+    font-size: 1.2em;
+  }
+  .say-hi {
+    margin: 75px 0 0;
+    transition: all 0.5s;
+    position: relative;
+    top: 0;
+    &:hover {
+      transition: all 0.5s;
+      top: -5px;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  .and {
+    font-size: 2.2em;
+    color: $lcolor;
+    display: inline;
+    margin: 0 5%;
+    position: relative;
+    top: 40px;
+  }
+  .visit-git {
+    margin: 75px 0 0;
+    transition: all 0.5s;
+    position: relative;
+    top: 0;
+    &:hover {
+      transition: all 0.5s;
+      top: -5px;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  #menu-toggle , label {
+    display: none;
+  }
+  nav {
+    text-align: center;
+    background-color: rgba($lcolor, 0.9);
+    box-sizing: border-box;
+    width: 80%;
+    padding: 20px 2%;
+    position: fixed;
+    top: 0;
+    left: 10%;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    box-shadow: 0 1px 150px grey;
+    font-size: 1em;
+    z-index: 100;
+    ul {
+      li {
+        display: inline;
+        a {
+          padding: 3% 2%;
+          color: $dcolor;
+          text-transform: uppercase;
+          position: relative;
+          top: 0;
+          transition: all 0.4s;
+          font-size: 1em;
+          &:hover {
+            color: $dcolor;
+            background-color: $bgcolor;
+            text-decoration: none;
+            padding-bottom: 15px;
+            padding-top: 15px;
+            border-radius: 5px 5px;
+          }
+          &:focus {
+            text-decoration: none;
+            color: $dcolor;
+          }
+          &.active {
+            background-color: $mcolor !important;
+            text-decoration: none;
+            font-weight: bold;
+            color: $lcolor;
+            padding: 4% 2%;
+            transition: all 0.4s cubic-bezier(.29, .8, 1, 1);
+            top: 7px;
+            border-radius: 5px 5px;
+            box-shadow: 0px 0px 30px #777;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  } 
+}
+/*<!--    ********************************************    -->
+//<!--                      LIFE MESSAGE      -->
+//<!--    ********************************************    -->*/
+.intro {
+  padding: 100px 0 60px;
+  background-color: $lcolor;
+  p {
+    width: 60%;
+    margin: 40px auto;
+  }
+}
+/*<!--   *********************************************    -->
+//<!--                     WHAT i LOVE-->
+//<!--    ********************************************    -->*/
+.love {
+  padding: 100px 0 60px;
+  img {
+    margin-bottom: 70px;
+  }
+  i {
+    font-size: 400%;
+    color: $lcolor;
+    background-color: $ldcolor;
+    padding: 15%;
+    border-radius: 50%;
+  }
+  h3 {
+    margin: 30px 0 0;
+    padding: 30px 0;
+    &:after {
+      content: " ";
+      border: 2px solid $ldcolor;
+      display: block;
+      margin: 20px auto 0;
+      width: 50px;
+    }
+  }
+  p {
+    margin-bottom: 10px;
+  }
+}
+/*<!--    ********************************************-->
+//<!--                     IPHONE SECTION-->
+//<!--    ********************************************-->*/
+.iphone {
+  padding-top: 100px;
+  article {
+    margin: 50px 0;
+    img {
+      margin-bottom: 50px;
+    }
+  }
+}
+/*<!--    ********************************************-->
+//<!--                     MY Nature-->
+//<!--    *******************************************-->*/
+.nature {
+  height: 300px;
+  background: $dcolor image-url("plants-bg.jpg") center;
+  background-size: cover;
+  background-attachment: fixed;
+  h2 {
+    padding-top: 100px;
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    color: $lcolor;
+  }
+  p {
+    font-size: 1.5em;
+    letter-spacing: 0.2em;
+    font-weight: bold;
+    span {
+      font-style: italic;
+      text-transform: uppercase;
+    }
+  }
+}
+/*<!--    ******************************************-->
+<!--                     WORK-->
+<!--    ******************************************-->*/
+.work {
+  padding-bottom: 40px;
+  background-color: $bgcolor;
+  position: static;
+  article {
+    margin-top: 100px;
+    .img {
+      height: 230px;
+      width: 100%;
+      transition: all 0.25s;
+      .overlay { 
+        height: 229px;
+        background-color: rgba($mcolor,0.6);
+        margin-bottom: 40px;
+        opacity: 0;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.25s;
+        &:hover {
+          opacity: 1;
+          transition: all 0.35s;
+        }
+        i {
+          position: relative;
+          top: 90px;
+          font-size: 30px;
+          color: $lcolor;
+        }
+        p {
+          position: relative;
+          top: 90px;
+          font-size: 20px;
+          color: $lcolor;
+        }
+      }
+    }
+    .img-animation {
+      background-position: left center !important;
+      transition: all 0.30s;
+    }
+    .portfolio-1 {
+      border: 1px solid $ldcolor;
+      border-radius: 5px;
+      background: image-url("portfolio-01.jpg") right center;
+      background-size: cover;
+    }
+    .portfolio-2 {
+      border: 1px solid $ldcolor;
+      border-radius: 5px;
+      background: image-url("portfolio-00.jpg") right center;
+      background-size: cover;
+    }
+    .portfolio-3 {
+      border: 1px solid $ldcolor;
+      border-radius: 5px;
+      background: image-url("portfolio-03.jpg") right center;
+      background-size: cover;
+    }
+    .portfolio-4 {
+      border: 1px solid $ldcolor;
+      border-radius: 5px;
+      background: image-url("portfolio-02.jpg") right center;
+      background-size: cover;
+    }
+    h3 {
+      margin-bottom: 30px;
+      &:after {
+        width: 45px;
+        display: block;
+        margin: 25px auto;
+        border: 2px solid $ldcolor;
+        content: " ";
+      }
+    }
+    p {
+      margin-bottom: 100px;
+    }
+  }
+  input[type="checkbox"] {
+    display:none;
+  }
+  input[type="checkbox"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background: image-url("check_radio_sheet.png") -38px top no-repeat;
+    cursor:pointer;
+  }
+  input[type="checkbox"]:checked + label span {
+    background: image-url("check_radio_sheet.png") right top no-repeat;
+  }
+}
+/*<!--    *****************************************   -->
+<!--                    Email-->
+<!--    *****************************************   -->*/
+.email {
+  box-sizing: padding-box;
+  padding: 120px 0 140px;
+  background: $dcolor image-url("keyboard-bg.jpg") center;
+  background-size: cover;
+  background-attachment: fixed;
+  h2 {
+    margin-top: 0;
+    letter-spacing: 0em;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: $lcolor;
+    margin-bottom: 40px;
+    i {
+      display: block;
+      font-size: 1.7em;
+      padding: 20px;
+    }
+  }
+  .text {
+    box-sizing: padding-box;
+    background-color: rgba($lcolor, 0);
+    padding: 10px;
+    width: 350px;
+    height: 58px;
+    border: $lcolor solid 1px;
+    color: $lcolor;
+  }
+  .button {
+    background-color: rgba($dcolor, 0.4);
+    padding: 18px;
+    text-transform: uppercase;
+    color: $lcolor;
+    border: $lcolor solid 1px;
+    transition: all 0.5s;
+    &:hover {
+      background-color: rgba($dcolor, 0.8);
+      transition: all 0.5s;
+    }
+  }
+}
+/*<!--    *********************************************  -->
+<!--                     CONTACT   -->
+<!--    *********************************************  -->*/
+.contact {
+  button {
+    display: block;
+    display: none;
+    margin: 50px auto 30px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba($lcolor,0);
+    border: 2px $ldcolor solid;
+    color: $ldcolor;
+    font-size: 1.2em;
+  }
+  h2 {
+    margin-top: 75px;
+  }
+  img {
+    margin-bottom: 50px;
+  }
+  .container {
+    width: 90%;
+  }
+  article {
+    width: 30.3%;
+    height: 275px;
+    background: $lcolor;
+    padding: 65px 0;
+    margin: 0 1.5% 50px;
+    transition: all 0.5s cubic-bezier(.27, .46, 1, 1);
+    position: relative;
+    border-bottom: 4px rgba($ldcolor , 0) solid;
+    top: 0;
+    &:hover {
+      top : -15px;
+      transition: top border 0.5s cubic-bezier(.27, .46, 1, 1);
+      border-bottom: 4px solid $ldcolor;
+    }
+    h4 {
+      font-size: 1.1em;
+      font-weight: bold;
+      &:after {
+        content: " ";
+        display: block;
+        border: 2px solid;
+        width: 30px;
+        margin: 25px auto;
+      }
+      i {
+        display: block;
+        font-size: 2em;
+        margin-bottom: 15px;
+      }
+    }
+    p {
+      margin: 0 10px;
+    }
+  }
+  ul {
+    margin-top: 35px;
+    margin-bottom: 60px;
+    li {
+      i {
+        @extend %contact-buttons;
+      }
+    }
+  }
+}
+/*//<!--    ************************************************    -->
+//<!--                  FOOTER    -->
+<!--    ***********************************************    -->*/
+footer {
+  background-color: darken($dcolor,15%);
+  border-top: 3px solid scale-color($mcolor, $lightness:30%);;
+  p {
+    color: $lcolor;
+    padding: 50px 0;
+    margin-bottom: 0;
+    a {
+      color: scale-color($mcolor, $lightness:30%);
+      &:hover {
+        color: $lcolor;
+        text-decoration: none;
+      }
+      &:active {
+        color: $ldcolor;
+        text-decoration: none;
+      }
+      &:focus {
+        color: $bgcolor;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    }
+  }
+} 

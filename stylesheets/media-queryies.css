@@ -1,0 +1,138 @@
+/*media queries according to its break-points*/
+@media screen and (max-width: 1305px) {
+    header nav {
+        width: 90%;
+        left: 5% !important
+    }
+}
+@media screen and (max-width: 930px) {
+    header nav {
+        width: 100%;
+        left: 0% !important
+    }
+    header nav a {
+        font-size: 0.9em
+    }
+}
+@media screen and (max-width: 740px) {
+    header label {
+        cursor: pointer;
+        z-index: 101;
+        display: block !important;
+        visibility: visible !important;
+        position: fixed;
+        right: 20px;
+        top: 20px
+    }
+    header label i {
+        font-size: 2.5em !important;
+        color: #651907
+    }
+    header #menu-toggle {
+        display: none !important;
+        z-index: 101
+    }
+    header #menu {
+        visibility: hidden;
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s
+    }
+    header #menu-toggle:checked + #menu {
+        visibility: visible;
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        display: block;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s
+    }
+    header nav {
+        padding: 10px 2% !important
+    }
+    header nav a {
+        font-size: 1em !important;
+        display: block;
+        padding: 10px 10% !important
+    }
+}
+@media screen and (max-width: 1104px) {
+    header h1 span {
+        color: #f58369
+    }
+    header .and {
+        color: #651907
+    }
+}
+@media screen and (max-width: 990px) {
+    .love {
+        padding-bottom: 0
+    }
+    .love i {
+        padding: 10%
+    }
+    .love p {
+        width: 75%;
+        margin: 0 auto;
+        margin-bottom: 50px
+    }
+    .contact article {
+        width: 30%;
+        height: 250px
+    }
+    .contact article p {
+        vertical-align: middle
+    }
+    .contact article .email {
+        font-size: 1em;
+        display: block;
+        margin: 0 auto
+    }
+}
+@media screen and (max-width: 767px) {
+    header p span {
+        color: #651907;
+        font-weight: bold;
+        display: block
+    }
+    .contact article {
+        width: 80% !important;
+        margin: 3% auto 0 !important
+    }
+    .contact article .email {
+        font-size: 1em
+    }
+}
+@media screen and (max-width: 480px) {
+    .say-hi, .and, .visit-git {
+        display: block !important;
+        margin: 0 auto !important
+    }
+    .say-hi {
+        margin-top: 15px !important
+    }
+    .and {
+        margin-top: 0 !important;
+        top: 0 !important
+    }
+    .problem h2 {
+        font-size: 2.5em
+    }
+    .problem p {
+        font-size: 1.1em
+    }
+    .ignite button {
+        width: 80%
+    }
+    .subscribe form .text {
+        width: 75%
+    }
+    .subscribe form .button {
+        margin: 15px;
+        width: 75%
+    }
+    .contact article {
+        width: 95% !important;
+        margin-bottom: 25px !important
+    }
+}
