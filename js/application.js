@@ -1,29 +1,33 @@
 $(document).ready(function() {
   // the default status for slide shows
   $(".page1").prop("checked",true);
-  $(".team-page1").prop("checked",true);
   $(".slide2").hide();
-  $(".team2").hide();
-
-
-
   // function for navigatin scroll and set active navigation button when clicked
   var lastId,
       topMenu = $("#menu"),
-      topMenuHeight = topMenu.outerHeight()+15,
+      topMenuHeight,
       menuItems = topMenu.find("a"),
       scrollItems = menuItems.map(function(){
         var item = $($(this).attr("href"));
         if (item.length) { return item; }
       });
+  // function to get the current width of the window so we can update the distance needed before the menu button being active  
+  function getTopMenuHeight() {
+    topMenuHeight = $(window).width() > 770 ? topMenu.outerHeight()+15 : topMenu.outerHeight()+50
+  };
+  // calling the function to activate
+  getTopMenuHeight();
+  $(window).resize(getTopMenuHeight);
+  //apply click event on menu li(s)
   menuItems.click(function(e){
     var href = $(this).attr("href"),
-        offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+        offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight;
     $('html, body').stop().animate({ 
       scrollTop: offsetTop
     }, 1000);
     e.preventDefault();
   });
+  // calling builtin scroll function on window query
   $(window).scroll(function(){
     var fromTop = $(this).scrollTop()+topMenuHeight*2;
     var cur = scrollItems.map(function(){
@@ -35,11 +39,11 @@ $(document).ready(function() {
 
     if (lastId !== id) {
       lastId = id;
+      console.log(id)
       menuItems.removeClass("active");
       menuItems.filter("[href='#"+id+"']").addClass("active");
     }                   
   });
-
   // portfolio section effects like the brown overlay when hover on images and slideshow
   $('#portfolio').find(".overlay").mouseenter(function() {
     $(this).parent("div").toggleClass("img-animation");
@@ -59,20 +63,7 @@ $(document).ready(function() {
     $(".slide1").slideUp();
     $(".slide2").slideDown();
   })
-  // team slide show
-  $("#team").find(".team-page1").click(function() {
-    $(".team-page1").prop("checked",true);
-    $(".team-page2").prop("checked",false);
-    $(".team2").slideUp();
-    $(".team1").slideDown();
-  })
-  $("#team").find(".team-page2").click(function() {
-    $(".team-page2").prop("checked",true);
-    $(".team-page1").prop("checked",false);
-    $(".team1").slideUp();
-    $(".team2").slideDown();
-  })
-  // function to make contact details hidden for resolution less 740
+  // function to make contact details hidden for resolution less than 740
   function contactDetails () {
     if ($(document).width() >= 740) {
       $("#contact").find("article").show();
@@ -88,7 +79,7 @@ $(document).ready(function() {
     }
   }
   contactDetails();
-  //  callin the function for event listener resize window (website width)
+  //  calling the function for event listener resize window (website width)
   $(window).resize(contactDetails);
   $("#contact").find("button").click(function() {
     $(this).closest("#contact").find("article").toggle();

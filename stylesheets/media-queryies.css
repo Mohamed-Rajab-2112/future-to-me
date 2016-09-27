@@ -1,8 +1,8 @@
 /*media queries according to its break-points*/
 @media screen and (max-width: 1305px) {
   header nav {
-    width: 90%;
-    left: 5% !important;
+    width: 100%;
+    left: 0 !important;
   }
 }
 @media screen and (max-width: 930px) {
@@ -14,8 +14,8 @@
     width: 100%;
     left: 0% !important;
   }
-  header nav a {
-    font-size: 0.9em;
+  header nav ul li a {
+    font-size: 0.8em;
   }
 }
 @media screen and (max-width: 740px) {

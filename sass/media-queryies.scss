@@ -13,22 +13,22 @@ $bgcolor: #F3E5DA;
 
   header {
     nav {
-      width: 90%;
-      left: 5% !important;
+      width: 100%;
+      left: 0 !important;
     }
   }
 }
 
 @media screen and (max-width:930px) {
- .work a:hover {
+  .work a:hover {
     text-decoration: none;
   }
   header {
     nav {
       width : 100%;
       left: 0% !important;
-      a {
-        font-size: 0.9em;
+      ul li a {
+        font-size: 0.8em;
       }
     }
   }
