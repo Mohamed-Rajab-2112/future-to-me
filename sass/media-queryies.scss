@@ -10,6 +10,7 @@ $bgcolor: #F3E5DA;
 /*media queries according to its break-points*/
 
 @media screen and (max-width:1305px) {
+
   header {
     nav {
       width: 90%;
@@ -19,6 +20,9 @@ $bgcolor: #F3E5DA;
 }
 
 @media screen and (max-width:930px) {
+ .work a:hover {
+    text-decoration: none;
+  }
   header {
     nav {
       width : 100%;
@@ -123,12 +127,6 @@ $bgcolor: #F3E5DA;
     }
   }
   .contact {
-//    button {
-//      display: block;
-//    }
-//    h2, img {
-//      display: none;
-//    }
     article {
       width: 80% !important;
       margin: 3% auto 0 !important;
@@ -140,6 +138,9 @@ $bgcolor: #F3E5DA;
 }
 
 @media screen and (max-width:480px) {
+  .work a:hover {
+    text-decoration: none !important;
+  }
   .say-hi , .and , .visit-git {
     display: block !important;
     margin: 0 auto !important;

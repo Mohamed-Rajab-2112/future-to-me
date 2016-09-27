@@ -267,6 +267,9 @@ header nav ul li a.active {
   background-color: #F3E5DA;
   position: static;
 }
+.work a {
+  text-decoration: none;
+}
 .work article {
   margin-top: 100px;
 }

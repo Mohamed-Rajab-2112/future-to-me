@@ -267,6 +267,9 @@ header{
   padding-bottom: 40px;
   background-color: $bgcolor;
   position: static;
+  a:hover {
+    text-decoration: none;
+  }
   article {
     margin-top: 100px;
     .img {
